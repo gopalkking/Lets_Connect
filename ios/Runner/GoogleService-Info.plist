@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD17UETKlfD_L859cAjiXOqmoukTfQc5yA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>662141672254</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.letsConnect</string>
+	<key>PROJECT_ID</key>
+	<string>letsconnect-88934</string>
+	<key>STORAGE_BUCKET</key>
+	<string>letsconnect-88934.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:662141672254:ios:b4d82dca2e237ea69baa6f</string>
+	<key>DATABASE_URL</key>
+	<string>https://letsconnect-88934-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "662141672254",
+    "firebase_url": "https://letsconnect-88934-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "letsconnect-88934",
+    "storage_bucket": "letsconnect-88934.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662141672254:android:22e322591b958f859baa6f",
+        "android_client_info": {
+          "package_name": "com.example.lets_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662141672254-s1v59cks2jfftbmu3qn3ogdeqht9lrdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjBT-ewuUHCDBw-mK28gVgFp1NUHl2XxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662141672254-s1v59cks2jfftbmu3qn3ogdeqht9lrdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
