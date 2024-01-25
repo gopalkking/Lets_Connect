@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:lets_connect/auth/auth_service.dart";
 import "package:lets_connect/components/my_button.dart";
 import "package:lets_connect/components/my_textfield.dart";
 
@@ -11,8 +12,22 @@ final void Function()? onTap;
 
    LoginPage({super.key, required this.onTap});
 
- void login(){
+ void login(BuildContext context) async{
+    //auth service
+    final authService=AuthService();
 
+    //try login 
+     try {
+       await authService.signInWithEmailAndPassword(_emailcontroller.text, _pwcontroller.text,);
+     } 
+      catch (e) {
+       showDialog(
+        context: context, 
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ));
+     }
+    
  }
 
   @override
@@ -37,6 +52,7 @@ final void Function()? onTap;
           ),
           ),
           const SizedBox(height: 25),
+
           //email textfield
           MyTextField(
             hintText: "Email",
@@ -44,6 +60,7 @@ final void Function()? onTap;
             controller: _emailcontroller,
           ),
          const SizedBox(height: 10,),
+
           //pw  textfield
          MyTextField(
             hintText: "Password",
@@ -51,13 +68,15 @@ final void Function()? onTap;
             controller: _pwcontroller,
           ),
         const SizedBox(height: 25,),
+
           //login button 
           MyButton(
             text: "Login",
-            onTap: login,
+            onTap: () => login(context),
             
           ),
          const SizedBox(height: 25,),
+
           //register now
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
