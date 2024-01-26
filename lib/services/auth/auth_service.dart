@@ -19,7 +19,8 @@ Future<UserCredential>signInWithEmailAndPassword(String email,password)async{
     {
        'uid': userCredential.user!.uid,
        'email': email,
-   });
+   },
+   );
       return userCredential;
   }
   
