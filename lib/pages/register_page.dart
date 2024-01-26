@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:lets_connect/auth/auth_service.dart';
+import 'package:lets_connect/services/auth/auth_service.dart';
 import 'package:lets_connect/components/my_button.dart';
 import 'package:lets_connect/components/my_textfield.dart';
 

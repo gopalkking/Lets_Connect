@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:lets_connect/auth/login_or_register.dart';
+import 'package:lets_connect/services/auth/login_or_register.dart';
 import 'package:lets_connect/pages/home_page.dart';
 
 
