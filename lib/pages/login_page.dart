@@ -18,7 +18,7 @@ final void Function()? onTap;
 
     //try login 
      try {
-       await authService.signInWithEmailAndPassword(_emailcontroller.text, _pwcontroller.text,);
+       await authService.signInWithEmailPassword(_emailcontroller.text, _pwcontroller.text,);
      } 
       catch (e) {
        showDialog(
@@ -46,7 +46,7 @@ final void Function()? onTap;
           ),
           const SizedBox(height: 50,),
           //welcome message
-          Text("Hey! The chat room lights up when you join",
+          const Text("Hey! The chat room lights up when you join",
           style: TextStyle(color: Colors.black87,
           fontSize: 20,
           ),
@@ -81,10 +81,10 @@ final void Function()? onTap;
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Not a member? "),
+            const Text("Not a member? "),
             GestureDetector(
               onTap: onTap,
-              child: Text(
+              child: const Text(
                 "Register now",style: TextStyle(fontWeight: FontWeight.bold),))
           ],
         )

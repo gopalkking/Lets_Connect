@@ -17,10 +17,10 @@ class RegisterPage extends StatelessWidget {
    void register(BuildContext context)
    {
     // get auth service
-    final _auth = AuthService();
+    final auth = AuthService();
     if(_pwcontroller.text ==_confirmpwcontroller.text){
       try {
-        _auth.signUpWithEmailPassword(
+        auth.signUpWithEmailPassword(
       _emailcontroller.text, 
       _pwcontroller.text);
       } catch (e) {
@@ -35,7 +35,7 @@ class RegisterPage extends StatelessWidget {
     else{
       showDialog(
         context: context, 
-        builder: (context) => AlertDialog(
+        builder: (context) => const AlertDialog(
           title: Text("Passwords don't match!"),
         ));
     }
@@ -57,7 +57,7 @@ class RegisterPage extends StatelessWidget {
           ),
           const SizedBox(height: 50,),
           //welcome message
-          Text("Let's create account for you",
+          const Text("Let's create account for you",
           style: TextStyle(color: Colors.black87,
           fontSize: 20,
           ),
@@ -99,10 +99,10 @@ class RegisterPage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Already have an account? "),
+            const Text("Already have an account? "),
             GestureDetector(
               onTap: onTap,
-              child: Text("Login now",
+              child: const Text("Login now",
               style: TextStyle(fontWeight: FontWeight.bold),),
             )
           ],

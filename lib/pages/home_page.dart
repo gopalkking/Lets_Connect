@@ -11,11 +11,15 @@ class Homepage extends StatelessWidget {
  final ChatService _chatService = ChatService();
  final AuthService _authService =AuthService();
 
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Lets Connect"),
+        backgroundColor: Colors.transparent,
+        
+        elevation: 0,
       
       ),
       drawer: const MyDrawer(),
@@ -37,7 +41,7 @@ Widget _buildUserList(){
     if (snapshot.connectionState == ConnectionState.waiting) {
     return const Text("Loading..");      
     }
-
+ 
     //return list view
     return ListView(
       children: snapshot.data!.map<Widget>((userData) => _buildUserListItem(userData,context),).toList(),
@@ -47,19 +51,31 @@ Widget _buildUserList(){
 
 }
 //build invidual list tile for user
-Widget _buildUserListItem(Map<String,dynamic> userData,BuildContext context){
-   return UserTile(
+Widget _buildUserListItem(
+  Map<String,dynamic> userData,BuildContext context) {
+  
+   if(userData["email"] != _authService.getCurrentUser()){
+    return UserTile(
     text: userData["email"],
     onTap: (){
       // tapped on a user -> go to chat
-      Navigator.push(context,MaterialPageRoute(builder: (context) => ChatPage(
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ChatPage(
         receiverEmail: userData["email"],
-      ),));
+        receiverID: userData["uid"],
+      ),
+      ),
+      );
     },
    );
+  }else{
+    return Container();
+  }
+   
+}
 }
 
-  
 
-}
 

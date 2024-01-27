@@ -20,8 +20,10 @@ class MyDrawer extends StatelessWidget {
         children: [
          Column(
           children: [
+            
             //logo
           DrawerHeader(
+              
             child: Center(
             child: Icon(Icons.message,
             color: Theme.of(context).colorScheme.primary,
