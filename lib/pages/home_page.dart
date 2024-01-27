@@ -54,7 +54,7 @@ Widget _buildUserList(){
 Widget _buildUserListItem(
   Map<String,dynamic> userData,BuildContext context) {
   
-   if(userData["email"] != _authService.getCurrentUser()){
+   if(userData["email"] != _authService.getCurrentUser()!.email){
     return UserTile(
     text: userData["email"],
     onTap: (){
